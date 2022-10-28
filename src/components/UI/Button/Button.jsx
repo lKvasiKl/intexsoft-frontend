@@ -4,8 +4,6 @@ import classNames from 'classnames';
 
 import style from './Button.module.css';
 
-console.log(style);
-
 const Button = ({children, onClick, outline, ...props}) => {
     const {className, ...otherProps} = props;
 
