@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-import style from './Button.module.css';
+import style from './Button.module.scss';
 
-const Button = ({children, onClick, outline, ...props}) => {
+const Button = ({children, onClick, ...props}) => {
     const {className, ...otherProps} = props;
 
     return (

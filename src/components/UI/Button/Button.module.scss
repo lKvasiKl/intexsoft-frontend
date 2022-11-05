@@ -1,0 +1,19 @@
+.button {
+    border-radius: 7px;
+    display: block;
+    text-decoration: none;
+    border: 1px solid transparent;
+    background-color: lightblue;
+    outline: none;
+    padding: 0.8rem 2rem;
+    width: fit-content;
+    height: fit-content;
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    color: white;
+    &:hover {
+        background-color: #f0c65c;
+    }
+}
