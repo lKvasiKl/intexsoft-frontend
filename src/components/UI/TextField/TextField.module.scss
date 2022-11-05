@@ -1,0 +1,63 @@
+$transition: 0.25s;
+
+.textFieldWrapper {
+  width: 100%;
+
+  .inputWrapper {
+    position: relative;
+    display: inline-flex;
+    border: 0.5px solid silver;
+    border-radius: 3px;
+    height: 3.4rem;
+    padding-left: 0.5rem;
+  }
+
+  .label {
+    user-select: none;
+    cursor: text;
+    position: absolute;
+    color: gray;
+    top: 0.9rem;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-size: 1.3rem;
+    transition: transform $transition;
+  }
+
+  .inputContainer {
+    margin-top: 18px;
+  }
+
+  .input {
+    outline: none;
+    border: none;
+    height: 2rem;
+    margin-right: 2.8rem;
+    font-size: 1.3rem;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+  }
+
+  .eyeIcon {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0.7rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+      fill: gray;
+      width: inherit;
+      height: inherit;
+    }
+  }
+}
+
+.focused, .filled {
+  .label {
+    transform: translate(-8px, -15px) scale(0.8);
+  }
+}
