@@ -1,0 +1,54 @@
+.checkboxWrapper {
+  .label {
+    cursor: pointer;
+    color: gray;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .input {
+    display: none;
+  }
+
+  .checkbox {
+    cursor: pointer;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 3px;
+    border: 1px solid silver;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+      visibility: collapse;
+      fill: gray;
+    }
+  }
+
+  &:hover {
+    .label {
+      color: #f0c65c;
+
+      .checkbox {
+        border: none;
+        box-shadow: 0 0 0 2px silver;
+      }
+    }
+  }
+}
+
+.checked {
+  border-color: #f0c65c;
+
+  .label {
+    .checkbox {
+      svg {
+        visibility: visible;
+      }
+    }
+  }
+}
