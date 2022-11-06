@@ -1,7 +1,9 @@
+@import '../../../assets/styles/colors';
+
 .checkboxWrapper {
   .label {
     cursor: pointer;
-    color: gray;
+    color: $white-color;
     font-family: Roboto, Helvetica, Arial, sans-serif;
     font-size: 1rem;
     display: flex;
@@ -18,24 +20,24 @@
     width: 1rem;
     height: 1rem;
     border-radius: 3px;
-    border: 1px solid silver;
+    border: 1px solid $white-color;
     display: flex;
     justify-content: center;
     align-items: center;
 
     svg {
       visibility: collapse;
-      fill: gray;
+      fill: $white-color;
     }
   }
 
   &:hover {
     .label {
-      color: #f0c65c;
+      color: $light-blue-color;
 
       .checkbox {
         border: none;
-        box-shadow: 0 0 0 2px silver;
+        box-shadow: 0 0 0 2px $white-color;
       }
     }
   }
