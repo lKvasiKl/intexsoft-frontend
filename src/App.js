@@ -1,13 +1,13 @@
-import LoginForm from "./feature/auth/components/LoginForm";
+import Login from "./feature/auth/components/Login";
 
-import './App.css';
+import './App.scss';
 
 const handleClick = () => alert('vsem ku');
 
 const App = () => {
     return (
         <div className="container">
-            <LoginForm />
+            <Login />
         </div>
     );
 }
