@@ -22,7 +22,7 @@ const LoginForm = () => {
                     </label>
                 </div>
                 <div className={styles.btnContainer}>
-                    <Button>
+                    <Button className={styles.btnSignIn}>
                         Sign in
                     </Button>
                 </div>
