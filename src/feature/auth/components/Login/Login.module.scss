@@ -1,0 +1,90 @@
+@import '../../../../assets/styles/colors';
+
+.wrapper {
+  border-radius: 1rem;
+  box-shadow: 0 25px 50px -12px;
+  display: flex;
+  width: 65%;
+  max-width: 56rem;
+
+  .loginWrapper {
+    width: 60%;
+    padding: 1.5rem;
+    background-color: $dark-blue-color;
+    border-radius: 1rem 0 0 1rem;
+
+    .companyName {
+      text-align: left;
+      font-weight: bold;
+      color: $white-color;
+    }
+
+    .login {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      .logo {
+        width: 150px;
+        height: 150px;
+        user-select: none;
+      }
+
+      .subtitle {
+        color: $white-color;
+        margin-bottom: 0.5rem;
+      }
+
+      .line {
+        border: 2px solid $white-color;
+        width: 2.5rem;
+        display: inline-block;
+        position: relative;
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+
+  .register {
+    width: 40%;
+    background-color: $light-blue-color;
+    color: $dark-blue-color;
+    border-radius: 0 1rem 1rem 0;
+    padding: 9rem 3rem 9rem 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .subtitle {
+      font-size: 1.7rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .line {
+      border: 2px solid $dark-blue-color;
+      width: 2.5rem;
+      display: inline-block;
+      position: relative;
+      margin-bottom: 0.5rem;
+    }
+
+    .text {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .btnRegister {
+      border: 2px solid $dark-blue-color;
+      border-radius: 5rem;
+      background-color: transparent;
+      color: $dark-blue-color;
+
+      &:hover {
+        background-color: $dark-blue-color;
+        color: $light-blue-color;
+      }
+    }
+  }
+}
