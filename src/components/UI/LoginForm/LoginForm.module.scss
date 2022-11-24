@@ -1,4 +1,4 @@
-@import '../../../../assets/styles/colors';
+@import 'src/assets/styles/colors';
 
 .formContainer {
   margin: 2rem;
@@ -30,18 +30,6 @@
       flex-direction: column;
       align-items: center;
       margin-top: 2.5rem;
-
-      .btnSignIn {
-        border: 2px solid $white-color;
-        border-radius: 5rem;
-        background-color: transparent;
-        color: $white-color;
-
-        &:hover {
-          background-color: $white-color;
-          color: $dark-blue-color;
-        }
-      }
     }
   }
 }
