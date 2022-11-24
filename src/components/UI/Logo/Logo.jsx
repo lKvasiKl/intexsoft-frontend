@@ -1,6 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
-import Logotype from '../../assets/images/Slide-logo.png';
+import logotype from '../../../assets/images/Slide-logo.png';
 
 import style from './Logo.module.scss';
 
@@ -14,7 +14,7 @@ const Logo = props => {
                 style.logo
             )}
                  alt="Logo"
-                 src={Logotype}
+                 src={logotype}
                  {...otherProps}
             />
         </div>
