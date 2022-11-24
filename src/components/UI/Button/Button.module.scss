@@ -1,9 +1,10 @@
+@import 'src/assets/styles/colors';
+
 .button {
-    border-radius: 7px;
     display: block;
     text-decoration: none;
-    border: 1px solid transparent;
-    background-color: lightblue;
+    border-radius: 5rem;
+    background-color: transparent;
     outline: none;
     padding: 0.8rem 2rem;
     width: fit-content;
@@ -12,8 +13,24 @@
     font-size: 1rem;
     font-family: Roboto, Helvetica, Arial, sans-serif;
     font-weight: bold;
-    color: white;
+}
+
+.light {
+    border: 2px solid $white-color;
+    color: $white-color;
+
     &:hover {
-        background-color: #f0c65c;
+        background-color: $white-color;
+        color: $dark-blue-color;
+    }
+}
+
+.dark {
+    border: 2px solid $dark-blue-color;
+    color: $dark-blue-color;
+
+    &:hover {
+        background-color: $dark-blue-color;
+        color: $light-blue-color;
     }
 }
