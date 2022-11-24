@@ -1,14 +1,16 @@
-import Login from "./feature/auth/components/Login";
+import {Routes, BrowserRouter} from 'react-router-dom';
+import NotAuthRoutes from './routes/NotAuthRoutes/NotAuthRoutes';
 
 import './App.scss';
 
-const handleClick = () => alert('vsem ku');
 
 const App = () => {
     return (
-        <div className="container">
-            <Login />
-        </div>
+        <BrowserRouter>
+            <div className="App">
+                <NotAuthRoutes/>
+            </div>
+        </BrowserRouter>
     );
 }
 
