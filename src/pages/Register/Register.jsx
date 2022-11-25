@@ -1,9 +1,9 @@
 import React from 'react';
-import Button from "../../components/UI/Button/Button";
+import Button from '../../components/UI/Button/Button';
 import RegisterForm from '../../components/UI/RegisterForm/RegisterForm';
+import {Link} from 'react-router-dom';
 
 import styles from './Register.module.scss';
-import {Link} from "react-router-dom";
 
 const Register = () => {
     return (
