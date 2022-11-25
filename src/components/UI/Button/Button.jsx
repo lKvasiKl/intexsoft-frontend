@@ -10,7 +10,7 @@ const BUTTON_THEME = {
 };
 
 const Button = ({children, onClick, theme, ...props}) => {
-    const {className, ...otherProps} = props;
+    const {...otherProps} = props;
 
     return (
         <button
