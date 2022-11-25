@@ -1,8 +1,8 @@
 import React from 'react';
 //import {Link} from 'react-router-dom';
-import Input from "../Input/Input";
-import PasswordInput from "../PasswordInput/PasswordInput";
-import Button from "../Button/Button";
+import Input from '../Input/Input';
+import PasswordInput from '../PasswordInput/PasswordInput';
+import Button from '../Button/Button';
 
 import styles from './RegiterForm.module.scss';
 
