@@ -2,7 +2,7 @@ import {createContext, useEffect, useState} from 'react';
 import {getSessionFromStorage, removeSessionFromStorage} from '../../helpers/tokens';
 import * as authService from '../../api/services/authService';
 
-export const AuthContext = createContext(null);
+export const AuthContext = createContext({});
 
 const AuthProvider = ({children}) => {
     const [isAuth, setIsAuth] = useState(false);

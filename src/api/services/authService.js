@@ -2,7 +2,7 @@ import {request} from './axiosService';
 
 export const register = async ({email, password, firstName, lastName}) => {
     await request({
-        url: "/auth/register",
+        url: "/api/auth/register",
         method: "POST",
         data: {
             email,
@@ -17,7 +17,7 @@ export const register = async ({email, password, firstName, lastName}) => {
 
 export const login = async ({email, password}) => {
     const response = await request({
-        url: "/auth/login",
+        url: "/api/auth/login",
         method: "POST",
         data: {
             email,
@@ -25,5 +25,11 @@ export const login = async ({email, password}) => {
         }
     });
 
-    localStorage.setItem("token", response.token)
+    localStorage.setItem(
+        "tokens",
+        JSON.stringify({
+            accessToken: response.accessToken,
+            refreshToken: response.refreshToken
+        })
+    );
 };

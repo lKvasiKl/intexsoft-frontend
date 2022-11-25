@@ -1,5 +1,5 @@
-export const getSessionFromStorage = () => localStorage.getItem("token");
+export const getSessionFromStorage = () => localStorage.getItem("tokens");
 
-export const removeSessionFromStorage = () => localStorage.removeItem("token");
+export const removeSessionFromStorage = () => localStorage.removeItem("tokens");
 
 

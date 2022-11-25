@@ -1,5 +1,7 @@
 import React from 'react';
 //import {Link} from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
+import {useAuth} from '../../../hooks/useAuth';
 import Input from '../Input/Input';
 import PasswordInput from '../PasswordInput/PasswordInput';
 import Button from '../Button/Button';
@@ -8,9 +10,20 @@ import styles from './RegiterForm.module.scss';
 
 const RegisterForm = ({buttonTheme, formTheme}) => {
     const [form, setForm] = React.useState({});
+    const navigate = useNavigate();
+    const {signUp} = useAuth();
 
     const handleChangeForm = ({ name, value }) => {
         setForm({ ...form, [name]: value });
+    };
+
+    const handleSignUp = async () => {
+        try {
+            await signUp(form);
+            navigate("/home");
+        } catch (e) {
+            alert(e.message);
+        }
     };
 
     return (
@@ -44,9 +57,8 @@ const RegisterForm = ({buttonTheme, formTheme}) => {
                 />
                 <div className={styles.btnContainer}>
                     <Button
-                        //TODO: onClick saveUser
                         theme={buttonTheme}
-                    >
+                        onClick={handleSignUp}>
                         Sign up
                     </Button>
                 </div>

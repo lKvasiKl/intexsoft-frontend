@@ -1,6 +1,6 @@
 import React from 'react';
-//import {Link} from 'react-router-dom';
-//import {validationSchema} from './validationSchema';
+import {useNavigate} from 'react-router-dom';
+import {useAuth} from '../../../hooks/useAuth';
 import Input from '../Input/Input';
 import PasswordInput from '../PasswordInput/PasswordInput';
 import Checkbox from '../Chackbox/Checkbox';
@@ -10,18 +10,26 @@ import styles from './LoginForm.module.scss';
 
 const LoginForm = ({buttonTheme, formTheme}) => {
     const [form, setForm] = React.useState({});
+    const navigate = useNavigate();
+    const {logIn} = useAuth();
 
     const handleChangeForm = ({name, value}) => {
         setForm({...form, [name]: value});
     };
 
-    const handleCheckUser = () => {
-        alert(JSON.stringify(form))
+    const handleCheckUser = async () => {
+        try {
+            await logIn(form);
+            navigate("/home");
+        } catch (e) {
+            alert(e.message);
+        }
     };
 
     return (
         <div className={styles.formContainer}>
-            <form className={styles.form}>
+            <form className={styles.form}
+                  onSubmit={handleCheckUser}>
                 <Input
                     type="text"
                     name="email"
@@ -44,9 +52,7 @@ const LoginForm = ({buttonTheme, formTheme}) => {
                     </label>
                 </div>
                 <div className={styles.btnContainer}>
-                    <Button
-                        theme={buttonTheme}
-                        onClick={handleCheckUser}>
+                    <Button theme={buttonTheme}>
                         Sign in
                     </Button>
                 </div>
