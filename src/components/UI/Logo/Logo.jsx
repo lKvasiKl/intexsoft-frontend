@@ -2,16 +2,15 @@ import React from 'react';
 import classNames from 'classnames';
 import logotype from '../../../assets/images/Slide-logo.png';
 
-import style from './Logo.module.scss';
+import styles from './Logo.module.scss';
 
-const Logo = props => {
-    const {className, ...otherProps} = props;
+const Logo = (size, props) => {
+    const {...otherProps} = props;
 
     return (
-        <div className={style.logoWrapper}>
+        <div className={styles.logoWrapper}>
             <img className={classNames(
-                className,
-                style.logo
+                styles.logo
             )}
                  alt="Logo"
                  src={logotype}
