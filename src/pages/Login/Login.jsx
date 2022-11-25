@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import Logo from '../../components/UI/Logo/Logo';
-import Button from "../../components/UI/Button/Button";
+import Button from '../../components/UI/Button/Button';
 import LoginForm from '../../components/UI/LoginForm/LoginForm';
 
 import styles from './Login.module.scss';
