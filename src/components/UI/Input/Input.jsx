@@ -9,7 +9,7 @@ const INPUT_THEME = {
 };
 
 const Input = ({type, name, placeholder, onChange, ...props}) => {
-    const {theme, error, className, onFocus, ...otherProps} = props;
+    const {theme, onFocus, ...otherProps} = props;
 
     const [inputFocused, setInputFocused] = useState(false);
 
@@ -40,14 +40,13 @@ const Input = ({type, name, placeholder, onChange, ...props}) => {
     }
 
     return (
-        <div className={classNames(className,
+        <div className={classNames(
             styles.textFieldWrapper,
             INPUT_THEME[theme])}
         >
             <span className={classNames(styles.inputWrapper, {
                 [styles.focused]: inputFocused,
-                [styles.filled]: props.value || inputRef.current?.value,
-                [styles.invalid]: error
+                [styles.filled]: props.value || inputRef.current?.value
             })}
                   onClick={handleTextFieldClick}>
                 <label className={styles.label}>{placeholder}</label>
