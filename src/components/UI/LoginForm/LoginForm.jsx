@@ -1,17 +1,22 @@
 import React from 'react';
 //import {Link} from 'react-router-dom';
-import Input from "../Input/Input";
-import PasswordInput from "../PasswordInput/PasswordInput";
-import Checkbox from "../Chackbox/Checkbox";
-import Button from "../Button/Button";
+//import {validationSchema} from './validationSchema';
+import Input from '../Input/Input';
+import PasswordInput from '../PasswordInput/PasswordInput';
+import Checkbox from '../Chackbox/Checkbox';
+import Button from '../Button/Button';
 
 import styles from './LoginForm.module.scss';
 
 const LoginForm = ({buttonTheme, formTheme}) => {
     const [form, setForm] = React.useState({});
 
-    const handleChangeForm = ({ name, value }) => {
-        setForm({ ...form, [name]: value });
+    const handleChangeForm = ({name, value}) => {
+        setForm({...form, [name]: value});
+    };
+
+    const handleCheckUser = () => {
+        alert(JSON.stringify(form))
     };
 
     return (
@@ -41,8 +46,7 @@ const LoginForm = ({buttonTheme, formTheme}) => {
                 <div className={styles.btnContainer}>
                     <Button
                         theme={buttonTheme}
-                        //TODO: onClick={handleCheckUser}
-                        >
+                        onClick={handleCheckUser}>
                         Sign in
                     </Button>
                 </div>
